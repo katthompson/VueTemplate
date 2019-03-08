@@ -1,0 +1,80 @@
+$blue: blue;
+$white: white;
+
+* {box-sizing: border-box;}
+.form-wrapper {width:100%;}
+.form-content {
+    max-width:1000px;
+    margin:0 auto;
+    h1 {
+        text-align:center;
+    }
+}
+form {margin:50px auto; width:80%; max-width:600px; text-align:left; display:flex; flex-wrap:wrap;}
+%form-group {
+    margin-bottom:10px; 
+    height:75px; 
+    position:relative;
+    width:50%;
+    padding:0 10px;
+}
+.form-group {
+    @extend %form-group;
+}
+.cb-group {
+    @extend %form-group;
+    height:45px;
+}
+.radios {
+    @extend %form-group;
+    height:auto;
+}
+%label {
+    display:inline-block;
+    margin-bottom:5px;
+}
+label {
+    @extend %label;
+    & + span {
+        display:inline-block;
+    }
+}
+.cbLabel {
+    @extend %label;
+    display:inline-block;
+}
+input {height:34px; width:100%; display:block;}
+input[type="checkbox"], input[type="radio"] {height:auto; width:auto; display:inline-block; margin-right:10px;}
+select {
+    height:34px; 
+    width:100%; 
+    display:block;
+    & + span {
+        display:inline-block;
+    }
+}
+
+button {
+    background-color: $blue;
+    color:$white;
+    border:none;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.error {
+    color:red;
+    font-size:12px;
+    position: absolute;
+    left:12px;
+    bottom:0;
+}
+
+@media (max-width:600px) {
+    .form-group {width:100%;}
+    .form-wrapper {margin-top:70px;}
+    .form-content {padding-top:1px;}
+}

@@ -1,0 +1,6 @@
+.thankyou-content {max-width:1000px; margin:0 auto;}
+
+@media (max-width:600px) {
+    .thankyou-wrapper {margin-top:70px;}
+    .thankyou-content {padding-top:1px;}
+}

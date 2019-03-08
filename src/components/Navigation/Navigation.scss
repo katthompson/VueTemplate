@@ -1,0 +1,27 @@
+ul {
+    list-style-type:none;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    margin:0; 
+    padding:0;
+}
+
+li {
+    padding:0 15px;
+    a {
+        color:black;
+        text-decoration:none;
+        &:hover, &:active, &.router-link-exact-active {
+            color:#7f1e1e;  
+        }
+    }
+}
+    
+
+@media (max-width:600px){
+    nav.mobile {background-color:#7f1e1e; position:fixed; top:70px; left:0; width:100%; height:100vh; z-index:10;}
+    nav.mobile ul {flex-direction:column; justify-content: center; margin-top:50px; }
+    nav.mobile ul li {margin:20px 0;}
+    nav.mobile ul li a {color:#fff; font-weight:bold;}
+}

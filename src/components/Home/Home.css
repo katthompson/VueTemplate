@@ -1,0 +1,6 @@
+.home-content {max-width:1000px; margin:0 auto;}
+
+@media (max-width:600px) {
+    .home-wrapper {margin-top:70px;}
+    .home-content {padding-top:1px;}
+}
